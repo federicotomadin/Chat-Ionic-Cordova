@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+        style="font-family: Arial, Helvetica, sans-serif;"
+        defaultHref="/"
+        text="Regresar"
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+      </ion-buttons>
+      <ion-title class="tituloHeader">
+      Opciones
+         <ion-icon class="ionIcon" src="./assets/sign-out-alt-solid.svg" (click)="salir()"></ion-icon>
+       </ion-title>
+    </ion-toolbar>
+  </ion-header> 
+
+<ion-content padding>
+  <ion-spinner name="lines" *ngIf="mostrar"  class="unSpinner"></ion-spinner>
+<button class="btnMenu colorPrincipal" id="1" (click)="Ingresar($event)">PPS-4A</button>
+<button class="btnMenu colorSecundario" id="2" (click)="Ingresar($event)">PPS-4B</button>
+</ion-content>

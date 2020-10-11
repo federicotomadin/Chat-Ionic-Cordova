@@ -1,0 +1,38 @@
+.botones-usuario {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+  }
+
+
+  .boton_personalizado{
+    text-decoration: none;
+    padding: 40x;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #4d0d16;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+
+  .boton_1{
+    text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    font-size: 25px;
+    font-style: italic;
+    color: #006505;
+    background-color: #82b085;
+    border-radius: 15px;
+    border: 3px double #006505;
+  }
+  .boton_1:hover{
+    opacity: 0.6;
+    text-decoration: none;
+  }

@@ -1,0 +1,7 @@
+{
+  "name": "LectorQR",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

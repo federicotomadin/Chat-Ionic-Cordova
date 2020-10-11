@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button
+        style="font-family: Arial, Helvetica, sans-serif;"
+        defaultHref="/"
+        text="Regresar"
+        color="primary"
+        mode="ios">
+      </ion-back-button>
+      </ion-buttons>
+      <ion-title class="tituloHeader">
+        Chateando : {{nombreUsuario}}
+         <ion-icon class="ionIcon" src="./assets/sign-out-alt-solid.svg" (click)="salir()"></ion-icon>
+       </ion-title>
+    </ion-toolbar>
+  </ion-header> 
+
+<ion-content padding>
+    <ion-spinner name="lines" *ngIf="mostrar" class="unSpinner"></ion-spinner>
+  <ion-card *ngFor="let mensaje of mensajes"
+    [ngClass]="(nombreUsuario == mensaje.nombre)? 'mensaje mensajePropio': 'mensaje mensajeGrupo'">
+
+    <label class="cabeceraMensaje">
+      {{mensaje.fecha}}
+    </label>
+    <br>
+    <label *ngIf="nombreUsuario != mensaje.nombre" class="cabeceraMensaje">
+      {{mensaje.nombre}} dice:
+    </label>
+    <ion-card-content>
+      {{mensaje.mensaje}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+    <!-- <ion-input [(ngModel)]="mensaje" maxlength="21">      
+    </ion-input>
+    <ion-icon id="iconoEnviar"name="send" style="zoom:2.6;" (click)="sendMessage()"></ion-icon> -->
+
+    <ion-item color="gray">
+
+      <ion-input class="enviarTexto" [(ngModel)]="mensaje" maxlength="21"></ion-input>
+      <button icon-only ion-button clear type="button" item-right (click)="sendMessage()">
+        <ion-icon style="zoom:2.6;" name="send"></ion-icon>
+      </button>
+    </ion-item>
+
+
+
+  </ion-toolbar>
+</ion-footer>
