@@ -8,5 +8,8 @@
       <div class="Aligner-item Aligner-item--bottom"></div>
     </div>
   </div>
+  <div [style.display]="swhoSplash ? 'none' : 'flex'">
+    <ion-router-outlet ></ion-router-outlet>
+  </div>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
